@@ -12,6 +12,7 @@ ${MainUrl}             https://automationintesting.online/
 Verify Welocme Heading
     [Documentation]    This is welcome title verification
     [Tags]             WelcomeTC
+    Appstate           Home
     GoTo               ${MainUrl}
     VerifyText         Welcome
     ClickText          Rooms                       anchor=1
@@ -26,12 +27,16 @@ NegativeTestcase for contact information
     TypeText           Name                        SuneelTest
     TypeText           Phone                       991281921199
     TypeText           Subject                     information
-    TypeText           Message                     TestXYZfdfgshyrutestgdsjdjssddd           anchor=2
+    TypeText           Message                     TestXYZfdfgshyrutestgdsjdjssddd         anchor=2
     ClickText          Submit
     VerifyText         Email may not be blank
-    TypeText          Email                       test@gmail.com
-    ClickText         Submit
-    VerifyText        Thanks for getting in touch
+    TypeText           Email                       test@gmail.com
+    ClickText          Submit
+    VerifyText         Thanks for getting in touch
+
+*** Keywords ***
+Home 
+    GoTo               ${MainUrl}
 
 
 
