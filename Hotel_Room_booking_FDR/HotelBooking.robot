@@ -1,11 +1,11 @@
 *** Settings ***
 Library                QWeb
-Suite Setup            OpenBrowser                 about:Blank    chrome
+Suite Setup            OpenBrowser                 about:Blank                 chrome
 
 
 *** Variables ***
 ${MainUrl}             https://automationintesting.online/
-          
+
 
 
 *** Test Cases ***
@@ -14,10 +14,10 @@ Verify Welocme Heading
     [Tags]             WelcomeTC
     GoTo               ${MainUrl}
     VerifyText         Welcome
-    ClickText          Rooms    anchor=1
-    ${count}=           GetElementCount    .card-title
-    Should Be True      ${count} > 0
-      
+    ClickText          Rooms                       anchor=1
+    ${count}=          GetElementCount             //div[contains(@class,'room-card')]
+    Should Be True     ${count} > 0
+
 
 
 
