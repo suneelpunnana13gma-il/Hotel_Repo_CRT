@@ -12,7 +12,7 @@ ${MainUrl}             https://automationintesting.online/
 Verify Welocme Heading
     [Documentation]    This is welcome title verification
     [Tags]             WelcomeTC
-    Appstate           Home
+    
     GoTo               ${MainUrl}
     VerifyText         Welcome
     ClickText          Rooms                       anchor=1
@@ -22,6 +22,7 @@ Verify Welocme Heading
 NegativeTestcase for contact information 
     [Documentation]    This is the contactinformations Submit
     [Tags]             Contactformtc
+    Appstate           Home
     ClickText          Contact                     anchor=1
     VerifyText         Send Us a Message
     TypeText           Name                        SuneelTest
