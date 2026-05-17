@@ -1,6 +1,7 @@
 *** Settings ***
 Library                QWeb
 Suite Setup            OpenBrowser                 about:Blank                 chrome
+Test Setup             OpenBrowser                 about:Blank                 chrome
 
 
 *** Variables ***
@@ -12,7 +13,7 @@ ${MainUrl}             https://automationintesting.online/
 Verify Welocme Heading
     [Documentation]    This is welcome title verification
     [Tags]             WelcomeTC
-    
+
     GoTo               ${MainUrl}
     VerifyText         Welcome
     ClickText          Rooms                       anchor=1
